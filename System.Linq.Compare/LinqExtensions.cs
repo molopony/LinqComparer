@@ -6,10 +6,11 @@ namespace System.Linq.Compare
 {
     public static class LinqExtensions
     {
-        public static CompareResult<T> Compare<T>(this IEnumerable<T> items, IEnumerable<T> compareItems)
+        public static CompareResult<T> Compare<T>(this IEnumerable<T> originalItems, IEnumerable<T> newItems) where T : class
         {
             var comparer = new Comparer<T>();
-            var result = comparer.Compare(items, compareItems);
+            comparer.MembersToCompare.All();
+            var result = comparer.Compare(originalItems, newItems);
             return result;
         }
     }

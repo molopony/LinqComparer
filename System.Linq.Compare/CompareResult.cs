@@ -18,9 +18,9 @@ namespace System.Linq.Compare
         }
 
         public IEnumerable<T> UnchangedItems => _unchangedItems.AsEnumerable();
-        public IEnumerable<T> AddedItems => _unchangedItems.AsEnumerable();
-        public IEnumerable<T> RemovedItems => _unchangedItems.AsEnumerable();
-        public IEnumerable<T> UpdatedItems => _unchangedItems.AsEnumerable();
+        public IEnumerable<T> AddedItems => _addedItems.AsEnumerable();
+        public IEnumerable<T> RemovedItems => _removedItems.AsEnumerable();
+        public IEnumerable<T> UpdatedItems => _updatedItems.AsEnumerable();
 
         public void AddUnchangedItem(T item)
         {
