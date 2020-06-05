@@ -1,2 +1,2 @@
 # LinqComparer
-.NET standard project for comparing secuences (IEnumerable&lt;T>). 
+.NET standard project for comparing sequences (IEnumerable&lt;T>). 
